@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaturant</title>
+    <!-- Link To CSS -->
+   
+    <link rel="stylesheet"  href="{{ url_for('static',filename='login.css') }}"> 
+    <link rel="stylesheet"  href="{{ url_for('static',filename='style.css') }}"> 
+    <!-- Box Icons -->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    body{
+       
+         background: url(/static/photos/bg2.png);
+         background-position: left;
+         background-size: cover;
+         background-repeat: no-repeat;
+         min-height: 100vh; 
+     
+      
+     
+      
+     
+      
+        
+     }
+  </style>
+</head>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="https://kit.fontawesome.com/d2b248b65c.js" crossorigin="anonymous"></script>
+<body>
+     <!-- Navbar -->
+     <header>
+        <a href="#" class="logo">YOG</a>
+ 
+        <div class="bx bx-menu" id="menu-icon"></div>
+ 
+        <ul class="navbar">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Practice</a></li>
+            <li><a href="/">Blogs</a></li>
+    <!-- <li><a href="#about">About</a></li>-->
+             <!-- <li><a href="/login">Profile</a></li>-->
+           
+       
+        <div class="icons">
+            <!-- <div class="bx bx-cart" id="cart-icon"></div> -->
+            <a href="/logout">
+               
+                   <!-- <p>Login</p> -->
+                    <div class='bx bx-user' id="login-icon" >
+                    </div>
+               
+                </a>
+             <div class="bx bx-menu" id="menu-icon"></div>
+        </div> </ul>
+    </header>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class = "messages">
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endwith %}     
+
+  <!-- <section class="about" id="about"> -->
+        <!-- login form -->
+        <section class="login" id="login">
+
+ 
+ 
+            <div class="wrapper">
+                <span class="icon-close">
+                    <!-- <i class='bx bx-x' ></i> -->
+                </span>
+                <div class="logreg-box">
+                    <!-- login form start -->
+                    <div class="form-box login">
+                        <div class="logreg-title">
+                        
+                        </div>
+                       <section>
+
+                            
+                                <!--<button type="submit" name="submit" class="btn"><a href="/profile" class="register-link">Profile</a></button>-->
+                            </section>
+                        <section>
+                                <button type="submit" name="submit" class="btn"><a href="/login" class="register-link">Logout</a></button>
+                            </section>
+                              
+                                <div class="logreg-link">
+                                    
+                                </div>
+                            </form>
+                    </div>
+              <!-- register form -->
+                    
+                </div>
+            </div>
+        </section> </section>
+
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="static/main.js"></script>
+    <script>
+     
+            let menu=document.querySelector('#menu-icon');
+            let navbar=document.querySelector('.navbar');
+             menu.onclick = () =>{
+                menu.classList.toggle('bx-x');
+                navbar.classList.toggle('open');
+    }
+        
+        
+
+
+function form_handler(event){
+    event.preventDefault()
+}
+    </script>

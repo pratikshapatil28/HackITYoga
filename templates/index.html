@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{{ url_for('static',filename='style.css') }}"> 
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Run Python Script</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">YOG</a>
+ 
+        <div class="bx bx-menu" id="menu-icon"></div>
+ 
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#project">Practice</a></li>
+            <li><a href="#skills">Blogs</a></li>
+           <!-- <li><a href="#about">About</a></li>-->
+            <!--<li><a href="/login">Profile</a></li>-->
+           
+       
+        <div class="icons">
+            <!-- <div class="bx bx-cart" id="cart-icon"></div> -->
+            <!--<a href="/logout">-->
+                <div class="dropdown" id="userDropdown">
+                    <div class='bx bx-user' id="login-icon" >
+                        <div class="dropdown-content">
+                    <a href="/login">Logout</a>
+                   <!-- <p>Login</p> -->
+               
+                    </div>
+                
+            </div>
+                <!--</a>-->
+             <div class="bx bx-menu" id="menu-icon"></div>
+        </div> 
+    </div>
+    
+    </ul>
+    </header>
+
+    <section class="home" id="home">
+        <div class="social">
+            
+        </div>
+        <div class="home-img">
+            <img src="/static/photos/yoga111.png" alt="My photo">
+        </div>
+        <div class="home-text">
+            <span>Welcome,</span>
+            <h1>Start Your Fitness Journey</h1>
+            <!-- <h2>Developer</h2> -->
+             <p>Get Started to your Self Fitness Journeyy </p> 
+           
+            <a href="#project" class="btn">Start
+
+            </a>
+        </div>
+ 
+    </section>
+    <div class="divider">
+
+    </div>
+
+    <section class="project" id="project">
+        <div class="heading">
+            <h2>Lets get started </h2>
+            <span>Let's begin your yoga journey with YOG </span>
+        </div>
+        <div class="project-content">
+
+        <div class="project-img">
+                <img src="/static/photos/yoga2.jpg" height="300" alt="">
+                <div class="overlay">
+                    <!-- <p>BEGINNER</p> -->
+                    <div class="links">
+                      <!-- <a href="beginnerblog.html" target="_blank">Link</a> -->
+                      <a href="/beginner" target="_blank">BEGINNER</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-img">
+                <img src="/static/photos/yoga3.jpg" height="300" alt="">
+                <div class="overlay">
+                    <!-- <p>ADVANCE</p> -->
+                    <div class="links">
+                      <!-- <a href="advanceblog.html" target="_blank">Link</a> -->
+                      <a href="/advance" target="_blank">ADVANCE</a>
+                    </div>
+                </div>
+            </div>
+            <!-- {% if result %}
+            <p>{{ result }}</p>
+        {% endif %} -->
+
+    </section>
+
+    <div class="divider">
+
+    </div>
+    
+    <!-- Blogs -->
+    <section class="skills" id="skills">
+        <div class="heading">
+         
+    
+        </div>
+        <!-- About Content -->
+        <div class="about-container">
+            <div class="about-img">
+                <div class="heading1">
+                    <h2>Fitness Blogs</h2>
+                    <span>Introduction</span>
+                </div>
+           </div>
+
+           <div class="about-text">
+                <div class="info-box">
+                  
+                    <div class="info-img">
+                        <!-- <img src="assets/images/dish/2.png" alt=""> -->
+                        <img src="/static/photos/beginnerguide.png" height="150">
+                    </div>
+                    <div class="info-title1">
+                        <a href="https://www.youngliving.com/blog/eu/en/beginners-guide-to-yoga/"><b></b>A Beginner’s Guide to Yoga</a>
+                      
+                    </div>
+                   
+                    <div class="info-bottom-row">       
+                    </div>
+                </div>
+
+                <div class="info-box">
+                  
+                    <div class="info-img">
+                        <!-- <img src="assets/images/dish/2.png" alt=""> -->
+                        <img src="/static/photos/whyimpyoga.png" height="150">
+                    </div>
+                    <div class="info-title1">
+                        <a href="https://mandali.org/what-is-really-important-in-yoga/#:~:text=A%20correctly%20aligned%20pose%20will,promote%20general%20ease%20and%20comfort"><b></b>How Important is Yoga posture alignment, really?</a>
+                      
+                    </div>
+                    
+                    <div class="info-bottom-row">       
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-img">
+                        <!-- <img src="assets/images/dish/2.png" alt=""> -->
+                        <img src="/static/photos/benefits.png" height="150">
+                    </div>
+                    <div class="info-title1">
+                        <a href="https://www.webmd.com/balance/the-health-benefits-of-yoga"><b></b>The Health Benefits of Yoga</a>
+                      
+                    </div>
+                    
+                    <div class="info-bottom-row">       
+                    </div>
+                </div>
+               
+                
+            </div>
+        </div>
+ 
+</section>                    
+
+
+    <div class="footer">
+        
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#project">Practice</a></li>
+           
+            <li><a href="#skills">Blogs</a></li>
+            <!--<li><a href="#contact">Profile</a></li>-->
+
+        </ul>
+        <!--<p>Developed  </p>-->
+ 
+    </div>
+    
+    <!--<script src="{{url_for('static',filename='main.js')}}"></script>-->
+    <script>
+        let menu=document.querySelector('#menu-icon');
+let navbar=document.querySelector('.navbar');
+menu.onclick = () =>{
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('open');
+}
+
+// script.js
+document.getElementById("login-icon").addEventListener("click", toggleDropdown);
+
+function toggleDropdown() {
+  const dropdownContent = document.querySelector(".dropdown-content");
+  dropdownContent.classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.bx-user')) {
+    const dropdownContent = document.querySelector(".dropdown-content");
+    if (dropdownContent.classList.contains('show')) {
+      dropdownContent.classList.remove('show');
+    }
+  }
+};
+
+</script>
+</body>
+</html>

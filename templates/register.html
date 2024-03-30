@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaturant</title>
+    <!-- Link To CSS -->
+   
+    <link rel="stylesheet"  href="{{ url_for('static',filename='login.css') }}"> 
+    <link rel="stylesheet"  href="{{ url_for('static',filename='style.css') }}"> 
+    <!-- Box Icons -->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    body{
+       
+         background: url(/static/photos/bg2.png);
+         background-position: left;
+         background-size: cover;
+         background-repeat: no-repeat;
+         min-height: 100vh; 
+     
+      
+     
+      
+     
+      
+        
+     }
+  </style>
+</head>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="https://kit.fontawesome.com/d2b248b65c.js" crossorigin="anonymous"></script>
+<body>
+     <!-- Navbar -->
+     <header>
+        <a href="#" class="logo">YOG</a>
+ 
+        <div class="bx bx-menu" id="menu-icon"></div>
+ 
+        <ul class="navbar">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Practice</a></li>
+            <li><a href="/">Blogs</a></li>
+            <!-- <li><a href="#about">About</a></li>-->
+            <!--<li><a href="#">Profile</a></li>-->
+           
+       
+        <div class="icons">
+            <!-- <div class="bx bx-cart" id="cart-icon"></div> -->
+            <a href="/login">
+               
+                   <!-- <p>Login</p> -->
+                    <div class='bx bx-user' id="login-icon" >
+                    </div>
+               
+                </a>
+             <div class="bx bx-menu" id="menu-icon"></div>
+        </div> </ul>
+    </header>
+
+
+
+  <!-- <section class="about" id="about"> -->
+        <!-- login form -->
+        <section class="login" id="login">
+
+ 
+ 
+            <div class="wrapper">
+                <span class="icon-close">
+                    <!-- <i class='bx bx-x' ></i> -->
+                </span>
+                <div class="logreg-box">
+                    <!-- login form start -->
+                    <div class="form-box login">
+                        <!--<div class="logreg-title">
+                            <h2>Login</h2>
+                            <p>Please first login to the website </p>
+                        </div>
+                            <form action="" method="POST">
+                                <div class="input-box">
+                                    <div class="icon">
+                                        <i class='bx bxs-envelope' ></i>
+                                    </div>
+                                   
+                                    <input type="email" name="email" required>
+                                    <label>Email</label>
+                                </div>
+                                <div class="input-box">
+                                    <div class="icon">
+                                        <i class='bx bxs-lock-alt' ></i>
+                                    </div>
+                                    <input type="password" name="password" required>
+                                    <label>Password</label>
+                                </div>
+                                <div class="remember-forgot">
+                                    <label>
+                                        <input type="checkbox">
+                                        Remember me 
+                                    </label>
+                                    <a href="forgot.php">Forgot password ?</a>
+                                </div>
+                                <button type="submit" name="submit" class="btn">Login</button>
+        
+                                <div class="logreg-link">
+                                    <p>Don't have an account ?
+                                        <a href="#" class="register-link">Register Now</a>
+                                    </p>
+                                </div>
+                            </form>-->
+                    </div>
+        <!-- register form -->
+                    <div class="form-box register">
+                  
+                        <div class="logreg-title">
+                            <h2>Registration</h2>
+                            <p>Please fill the following details</p>
+                        </div>
+                            <form action="{{ url_for('register') }}" method="POST">
+                           
+                                <div class="input-box">
+                                    <div class="icon">
+                                        <i class='bx bx-user-circle' ></i>
+                                        <!-- <i class='bx bx-user' ></i> -->
+                                        </div>      
+                                       
+    
+                                    <input type="text" name="name" required>
+                                    <label for="name">Full Name</label>
+                                </div>
+        
+                                <div class="input-box">
+                                    <div class="icon">
+                                        <i class='bx bxs-envelope' ></i>
+    </div>
+   
+                                    <input type="email" name="email" required>
+                                    <label for="email">Email</label>
+                                </div>
+                                <div class="input-box">
+                                    <div class="icon">
+                                        <i class='bx bxs-lock-alt' ></i>
+    </div>
+    
+                                    <input type="password" name="pass" required>
+                                    <label for="password">Password</label>
+                                </div>
+                                <div class="remember-forgot">
+                                    <label>
+                                        <input type="checkbox">
+                                        I agree to the terms & conditions
+                                    </label>
+                                   
+                                </div>
+                               
+                                <button type="submit" name="submit" class="btn">Register</button>
+                               
+                                <div class="logreg-link">
+                                    <p>Already have an account ?
+                                        <a href="login" class="login-link">Login</a>
+                                    </p>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </section> </section>
+
+
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="static/main.js"></script>
+    <script>
+        
+const wrapper=document.querySelector('.wrapper');
+const registerLink=document.querySelector('.register-link');
+const loginLink=document.querySelector('.login-link');
+const btnpop=document.querySelector('#login-icon');
+const iconClose=document.querySelector('.icon-close');
+
+registerLink.onclick=()=>{
+    wrapper.classList.add('active');
+};
+loginLink.onclick=()=>{
+    wrapper.classList.remove('active');
+};
+btnpop.onclick=()=>{
+    wrapper.classList.add('active-popup');
+};
+iconClose.onclick=()=>{
+    wrapper.classList.remove('active-popup');
+};
+
+    </script>
